@@ -10,7 +10,7 @@ Taco Cloud
 
 <body>
 
-<form method="POST" th:action="@{/orders}" th:object="${tacoOrder}">
+<form th:action="@{/orders}" th:object="${tacoOrder}" method="post"  class="form">
 <h1>Order your taco creation</h1>
 
 <img th:src="@{/images/startSplash.jpg}" />
@@ -20,8 +20,8 @@ Taco Cloud
 
 <h3>Deliver my taco to...</h3>
 <label for="deliveryName">Name: </label>
-<input type="text" th:field="*{deliveryName}" />
-<span class="validationError" th:if="${#fields.hasErrors('deliveryName')}" th:errors="*{deliveryName}">TEST Error</span>
+<input type="text" th:field="*{deliveryName}" id="deliveryname" placeholder="DeliveryName" />
+<div class="validationError" th:if="${#fields.hasErrors('deliveryName')}" th:errors="*{deliveryName}">TEST Error</div>
 <br/>
 <label for="deliveryStreet">Street address: </label>
 <input type="text" th:field="*{deliveryStreet}"/>
