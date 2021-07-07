@@ -18,7 +18,8 @@ import lombok.Data;
 
 @Data
 public class TacoOrder {
-	@NotBlank(message="Delivery name is required")
+	@NotBlank(message="Can't be blank!")
+	@Size(min=2,message="At least two!")	
 	private String deliveryName;
 	
 	private String deliveryStreet;
