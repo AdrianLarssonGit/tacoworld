@@ -45,11 +45,18 @@ public class DesignTacoController {
 		}
 
 	
+
 	@GetMapping
 	public String showDesignForm(Model model) {
 		model.addAttribute("taco", new Taco());
 		return "design";
 		}
+	
+	@PostMapping
+	public String processTaco(Taco taco) {
+		log.info("Processing taco " + taco);
+		return "redirect:/orders/current/";
+	}
 	
 	private Iterable<Ingredient> filterByType(
 			List<Ingredient> ingredients, Type type) {

@@ -5,12 +5,14 @@
 
 <head>
 	<title>Taco Cloud</title>
-	<link rel="stylesheet" th:href="@{/styles.css}" />
+	<link th:href="@{style.css}" rel="stylesheet" />
 </head>
 
 <body>
 
-<h1>Design your taco!</h1>
+
+
+<div id="border"><h1>Design your taco!</h1></div>
 <img th:src="@{/images/startSplash.jpg}"/>
 
 <form method="POST" th:object="${taco}">
