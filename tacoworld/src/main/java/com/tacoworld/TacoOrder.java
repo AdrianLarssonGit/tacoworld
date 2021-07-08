@@ -13,11 +13,17 @@ import javax.validation.constraints.*;
 //import org.hibernate.validator.constraints.CreditCardNumber;
 
 import java.util.ArrayList;
+import java.util.Date;
+
 import lombok.Data;
 
 
 @Data
 public class TacoOrder {
+	
+	private Long id;
+	private Date placedAt = new Date();
+	
 	@NotBlank(message="Can't be blank!")
 	@Size(min=2,message="At least two!")	
 	private String deliveryName;

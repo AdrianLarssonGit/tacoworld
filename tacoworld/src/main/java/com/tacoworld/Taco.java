@@ -1,5 +1,7 @@
 package com.tacoworld;
 
+
+import java.util.Date;
 import java.util.List;
 
 import javax.validation.constraints.NotBlank;
@@ -11,6 +13,10 @@ import lombok.Data;
 
 @Data
 public class Taco {
+	
+	private Long id;
+	
+	private Date createdAt = new Date();
 	
 	//@NotEmpty @Size(min=5, message="Name must be at least 5 char long")
 	private String name;
